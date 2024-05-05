@@ -194,6 +194,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6345223531083715688}
+    - targetCorrespondingSourceObject: {fileID: -1019849202092685158, guid: a25d1312530c2034087dbd8d2be966f8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2892381699802316052}
+    - targetCorrespondingSourceObject: {fileID: -1019849202092685158, guid: a25d1312530c2034087dbd8d2be966f8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5210916296300131367}
     - targetCorrespondingSourceObject: {fileID: 7003380046937521369, guid: a25d1312530c2034087dbd8d2be966f8,
         type: 3}
       insertIndex: -1
@@ -1505,6 +1513,48 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &2892381699802316052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3649062440557928418}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.04, z: 0.02}
+  m_Center: {x: 0, y: -0.01, z: 0}
+--- !u!65 &5210916296300131367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3649062440557928418}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.04, z: 0.02}
+  m_Center: {x: -0.02, y: 0.01, z: 0}
 --- !u!4 &4055471695110827004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8879753195717098628, guid: a25d1312530c2034087dbd8d2be966f8,

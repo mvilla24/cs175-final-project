@@ -183,6 +183,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3719106954885152786}
+    - targetCorrespondingSourceObject: {fileID: -3556817346404478780, guid: af900bc80bebff94784be3ae64b37557,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1617540519061280401}
     - targetCorrespondingSourceObject: {fileID: 5421769928514754881, guid: af900bc80bebff94784be3ae64b37557,
         type: 3}
       insertIndex: -1
@@ -1176,6 +1180,27 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &1617540519061280401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677820815889653505}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.06, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1847161504257607171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4591107788997146170, guid: af900bc80bebff94784be3ae64b37557,
