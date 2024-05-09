@@ -7,10 +7,9 @@ public class DayNightCycle : MonoBehaviour
     public GameObject sun;
     public GameObject moon;
 
-
     public Material daySkyBox;
     public Material nightSkyBox;
-    private float dayIntensity = 1f;
+    private float dayIntensity = 1.25f;
     private float nightIntensity = 0.3f;
 
     public float sunAngle = 0f;
@@ -24,9 +23,17 @@ public class DayNightCycle : MonoBehaviour
 
     public bool isDay = true;
     public bool isNight = false;
+
+    static bool hasInstance = false;
     // Start is called before the first frame update
     void Start()
     {
+        if (hasInstance)
+        {
+            Destroy(gameObject);
+        }
+        hasInstance = true;
+        DontDestroyOnLoad(gameObject);
         sunSpeed = 180f/dayLength;
         moonSpeed = 180f/nightLength;
         sun.transform.rotation = Quaternion.Euler(-10f, -30f, 0f);
@@ -40,6 +47,12 @@ public class DayNightCycle : MonoBehaviour
         isNight = false;
         moon.SetActive(false);
     }
+
+    // // Start is called before the first frame update
+    // void Start()
+    // {
+        
+    // }
 
     // Update is called once per frame
     void Update()

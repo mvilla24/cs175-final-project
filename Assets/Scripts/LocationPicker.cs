@@ -10,7 +10,7 @@ public class LocationPicker : MonoBehaviour
 
     public void GoToSpring()
     {
-        if (isSceneChosen)
+        if (isSceneChosen || GameData.sceneToLoad == GameData.springScene)
         {
             return;
         }
@@ -23,7 +23,7 @@ public class LocationPicker : MonoBehaviour
 
     public void GoToSummer()
     {
-        if (isSceneChosen)
+        if (isSceneChosen || GameData.sceneToLoad == GameData.summerScene)
         {
             return;
         }
@@ -36,7 +36,7 @@ public class LocationPicker : MonoBehaviour
 
     public void GoToFall()
     {
-        if (isSceneChosen)
+        if (isSceneChosen || GameData.sceneToLoad == GameData.fallScene)
         {
             return;
         }
@@ -49,7 +49,7 @@ public class LocationPicker : MonoBehaviour
 
     public void GoToWinter()
     {
-        if (isSceneChosen)
+        if (isSceneChosen || GameData.sceneToLoad == GameData.winterScene)
         {
             return;
         }

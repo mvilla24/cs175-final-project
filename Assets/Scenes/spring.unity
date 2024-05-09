@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 1.25
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 1c41273d75615ab40b3ab46a9cf05cb7, type: 2}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11369525, g: 0.13405073, b: 0.094121665, a: 1}
+  m_IndirectSpecularColor: {r: 0.13883935, g: 0.24714178, b: 0.34402126, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3268251080536247212, guid: a82095cb98b890448b91921373edb204, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5794817238043122541, guid: a82095cb98b890448b91921373edb204, type: 3}
       propertyPath: fadesOutAtStart
       value: 1
@@ -334,10 +338,6 @@ PrefabInstance:
     - target: {fileID: 9057812205893640990, guid: a82095cb98b890448b91921373edb204, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057812205893640990, guid: a82095cb98b890448b91921373edb204, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -999,8 +999,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3156246525780203470, guid: 9ede963d919b1b745b33a36d41cf0cdf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6830127
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156246525780203470, guid: 9ede963d919b1b745b33a36d41cf0cdf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.6830127
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156246525780203470, guid: 9ede963d919b1b745b33a36d41cf0cdf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.18301266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156246525780203470, guid: 9ede963d919b1b745b33a36d41cf0cdf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.18301266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156246525780203470, guid: 9ede963d919b1b745b33a36d41cf0cdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3156246525780203470, guid: 9ede963d919b1b745b33a36d41cf0cdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

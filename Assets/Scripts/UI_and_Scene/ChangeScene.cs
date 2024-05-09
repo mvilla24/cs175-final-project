@@ -31,7 +31,7 @@ public class ChangeScene : MonoBehaviour
         GameData.sceneToLoad = targetScene;
         sceneTransition.FadeInObject();
         yield return new WaitWhile (()=> sceneTransition.isFading);
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadScene("loading");
     }
 
     IEnumerator GoToTargetScene()
