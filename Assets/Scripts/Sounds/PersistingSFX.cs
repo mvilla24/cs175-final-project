@@ -94,6 +94,10 @@ public class PersistingSFX : MonoBehaviour
         {
             source.Stop();
         }
+        else if (!GameData.badWeather && GameData.sceneToLoad == GameData.fallScene)
+        {
+            source.Stop();
+        }
         else if (!source.isPlaying)
         {
             StartSong();

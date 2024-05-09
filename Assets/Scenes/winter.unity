@@ -6555,7 +6555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9969798d3e5eade42a8eb52613fba7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 377285071}
+  weatherParticles: {fileID: 377285071}
 --- !u!1001 &1225692759
 PrefabInstance:
   m_ObjectHideFlags: 0

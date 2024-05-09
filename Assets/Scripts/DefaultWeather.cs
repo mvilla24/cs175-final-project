@@ -8,7 +8,8 @@ public class DefaultWeather : MonoBehaviour
     void Awake()
     {
         if (GameData.sceneToLoad == GameData.springScene
-            || GameData.sceneToLoad == GameData.winterScene)
+            || GameData.sceneToLoad == GameData.winterScene
+            || GameData.sceneToLoad == GameData.fallScene)
         {
            GameData.badWeather = true;
         }

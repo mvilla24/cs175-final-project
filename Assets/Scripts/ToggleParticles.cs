@@ -5,7 +5,7 @@ using UnityEngine;
 public class ToggleParticles : MonoBehaviour
 {
     private bool badWeather = true;
-    public GameObject particleSystem;
+    public GameObject weatherParticles;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class ToggleParticles : MonoBehaviour
         if (badWeather != GameData.badWeather)
         {
             badWeather = GameData.badWeather;
-            particleSystem.SetActive(badWeather);
+            weatherParticles.SetActive(badWeather);
         }
     }
 }
