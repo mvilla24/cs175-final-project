@@ -36,6 +36,18 @@ public class PersistingSFX : MonoBehaviour
         StartSong();
     }
 
+    void Update()
+    {
+        if (!source.isPlaying)
+        {
+            return;
+        }
+        if (GameData.badWeather && GameData.sceneToLoad == GameData.springScene)
+        {
+            source.Stop();
+        }
+    }
+
     public void StartSong()
     {
         UpdateClipIndex();

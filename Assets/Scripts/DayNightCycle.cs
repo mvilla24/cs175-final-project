@@ -7,8 +7,13 @@ public class DayNightCycle : MonoBehaviour
     public GameObject sun;
     public GameObject moon;
 
-    public Material daySkyBox;
-    public Material nightSkyBox;
+    private Material daySkyBox;
+    private Material nightSkyBox;
+    public Material dayNormalSky;
+    public Material nightNormalSky;
+    public Material dayWeatherSky;
+    public Material nightWeatherSky;
+
     private float dayIntensity = 1.25f;
     private float nightIntensity = 0.3f;
 
@@ -24,6 +29,8 @@ public class DayNightCycle : MonoBehaviour
     public bool isDay = true;
     public bool isNight = false;
 
+    public bool badWeather = true;
+
     static bool hasInstance = false;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +41,22 @@ public class DayNightCycle : MonoBehaviour
         }
         hasInstance = true;
         DontDestroyOnLoad(gameObject);
+    
+        badWeather = GameData.badWeather;
+        if (!badWeather)
+        {
+            daySkyBox = dayNormalSky;
+            nightSkyBox = nightNormalSky;
+            sun.GetComponent<Light>().shadowStrength = 0.7f;
+            moon.GetComponent<Light>().shadowStrength = 0.5f;
+        }
+        else
+        {
+            daySkyBox = dayWeatherSky;
+            nightSkyBox = nightWeatherSky;
+            sun.GetComponent<Light>().shadowStrength = 0.35f;
+            moon.GetComponent<Light>().shadowStrength = 0.25f;
+        }
         sunSpeed = 180f/dayLength;
         moonSpeed = 180f/nightLength;
         sun.transform.rotation = Quaternion.Euler(-10f, -30f, 0f);
@@ -58,6 +81,7 @@ public class DayNightCycle : MonoBehaviour
     void Update()
     {
         // Separate cases in case overlap necessary later
+        UpdateWeather();
         if (isDay)
         {
             DayCycle();
@@ -69,11 +93,12 @@ public class DayNightCycle : MonoBehaviour
 
     }
 
-    void DayCycle() {
+    void DayCycle() 
+    {
         float sunStep = sunSpeed * Time.deltaTime;
         sunAngle += sunStep;
         sun.transform.Rotate(new Vector3(sunStep, 0f, 0f));
-        if (sunAngle >= 192f)
+        if (sunAngle >= 188f)
         {
             // Show and start night
             isNight = true;
@@ -88,11 +113,12 @@ public class DayNightCycle : MonoBehaviour
         }
     }
 
-    void NightCycle() {
+    void NightCycle() 
+    {
         float moonStep = moonSpeed * Time.deltaTime;
         moonAngle += moonStep;
         moon.transform.Rotate(new Vector3(moonStep, 0f, 0f));
-        if (moonAngle >= 185f)
+        if (moonAngle >= 180f)
         {
             // Show and start day
             isDay = true;
@@ -104,6 +130,39 @@ public class DayNightCycle : MonoBehaviour
             moon.SetActive(false);
             moonAngle = 0f;
             moon.transform.rotation = Quaternion.Euler(0f, -30f, 0f);
+        }
+    }
+
+    public void UpdateWeather()
+    {
+        if (badWeather == GameData.badWeather)
+        {
+            return;
+        }
+        // Debug.Log("Updating Weather");
+        badWeather = GameData.badWeather;
+        if (!badWeather)
+        {
+            daySkyBox = dayNormalSky;
+            nightSkyBox = nightNormalSky;
+            sun.GetComponent<Light>().shadowStrength = 0.7f;
+            moon.GetComponent<Light>().shadowStrength = 0.5f;
+        }
+        else
+        {
+            daySkyBox = dayWeatherSky;
+            nightSkyBox = nightWeatherSky;
+            sun.GetComponent<Light>().shadowStrength = 0.35f;
+            moon.GetComponent<Light>().shadowStrength = 0.25f;
+        }
+        
+        if (isDay)
+        {
+            RenderSettings.skybox = daySkyBox;
+        }
+        if (isNight)
+        {
+            RenderSettings.skybox = nightSkyBox;
         }
     }
 }

@@ -22,6 +22,8 @@ public static class GameData
     public static string fallScene = "fall";
     public static string winterScene = "winter";
 
+    public static bool badWeather = true;
+
     // public static int HighScore
     // {
     //     get
@@ -43,5 +45,10 @@ public static class GameData
     {
         isGamePaused = false;
         Time.timeScale = 1;
+    }
+
+    public static void ToggleWeather()
+    {
+        badWeather = !badWeather;
     }
 }

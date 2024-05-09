@@ -258,11 +258,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sun: {fileID: 2640393861070030579}
   moon: {fileID: 5928164183218578059}
-  daySkyBox: {fileID: 2100000, guid: 1c41273d75615ab40b3ab46a9cf05cb7, type: 2}
-  nightSkyBox: {fileID: 2100000, guid: 58824f672a766954abd253fe74f4f559, type: 2}
+  dayNormalSky: {fileID: 2100000, guid: 1c41273d75615ab40b3ab46a9cf05cb7, type: 2}
+  nightNormalSky: {fileID: 2100000, guid: 58824f672a766954abd253fe74f4f559, type: 2}
+  dayWeatherSky: {fileID: 2100000, guid: 4a32a5dc8df3e054b976bf25f8320aac, type: 2}
+  nightWeatherSky: {fileID: 2100000, guid: 9187557baa6f37f49ae75fe9091ff8e1, type: 2}
   sunAngle: 0
   dayLength: 15
   moonAngle: 0
   nightLength: 15
   isDay: 1
   isNight: 0
+  badWeather: 0
