@@ -30,6 +30,7 @@ public class PersistingSFX : MonoBehaviour
 
     void Start()
     {
+        currentScene = GameData.sceneToLoad;
         source = GetComponent<AudioSource>();
         source.clip = sfxSongs[sfxIndex];
         mixer.SetFloat("SFXVolume", Mathf.Log10(0.0f) * 20);
@@ -38,14 +39,7 @@ public class PersistingSFX : MonoBehaviour
 
     void Update()
     {
-        if (!source.isPlaying)
-        {
-            return;
-        }
-        if (GameData.badWeather && GameData.sceneToLoad == GameData.springScene)
-        {
-            source.Stop();
-        }
+        CheckWeather();
     }
 
     public void StartSong()
@@ -92,5 +86,17 @@ public class PersistingSFX : MonoBehaviour
             sfxIndex = 3;
         }
         currentScene = GameData.sceneToLoad;
+    }
+
+    void CheckWeather()
+    {
+        if (!GameData.badWeather && GameData.sceneToLoad == GameData.springScene)
+        {
+            source.Stop();
+        }
+        else if (!source.isPlaying)
+        {
+            StartSong();
+        }
     }
 }
