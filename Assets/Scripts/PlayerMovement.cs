@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+
+    public AudioSource footsteps;
+    public bool isMoving = false;
 
     public float speed = 5;
     public float gravity = -9.18f;
@@ -36,6 +40,21 @@ public class PlayerMovement : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+        isMoving = (x != 0f || z != 0f);
+        // Debug.Log(isMoving);
+
+        if (footsteps != null)
+        {
+            if (isMoving && !footsteps.isPlaying)
+            {
+                footsteps.Play();
+            }
+            else if (!isMoving && footsteps.isPlaying)
+            {
+                footsteps.Stop();
+            }
+        }
 
         Vector3 move = transform.right * x + transform.forward * z;
 
