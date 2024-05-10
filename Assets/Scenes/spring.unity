@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 139766768}
+  footsteps: {fileID: 0}
+  isMoving: 0
   speed: 5
   gravity: -9.18
   jumpHeight: 3

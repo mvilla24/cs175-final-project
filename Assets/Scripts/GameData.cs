@@ -24,6 +24,8 @@ public static class GameData
 
     public static bool badWeather = true;
 
+    public static bool showedBlurbs = false;
+
     // public static int HighScore
     // {
     //     get

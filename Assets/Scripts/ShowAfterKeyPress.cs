@@ -5,22 +5,18 @@ using UnityEngine;
 public class ShowAfterKeyPress : MonoBehaviour
 {
     public GameObject buttonMenu;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string keyName;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp("m"))
+        if (Input.GetKeyUp(keyName))
         {
-            HideObject();
+            ToggleObject();
         }
     }
 
-    public void HideObject()
+    public void ToggleObject()
     {
         buttonMenu.SetActive(!buttonMenu.activeSelf);
         if (buttonMenu.activeSelf)
