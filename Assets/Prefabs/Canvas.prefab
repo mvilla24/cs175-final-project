@@ -2853,12 +2853,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Use ''WASD'' keys to move.
+  m_text: 'Use WASD/arrow keys to move.
 
-    Press ''m'' for the seasons/weather menu.
+    Press ''m'' for the seasons/weather
+    menu.
 
-    Press
-    ''esc'' to quit the game.
+    Press ''esc'' to quit the game.
 
     Press ''h'' to toggle this tooltip.'
   m_isRightToLeft: 0
